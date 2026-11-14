@@ -1,0 +1,13 @@
+------------------------------------------------
+Trace           : traces/repeated.hex
+Cache           : 1024 B, 16 B blocks, 64 lines
+Accesses        : 1024
+Hits / Misses   : 992 / 32
+Hit ratio       : 96.88 %
+Miss ratio      : 3.12 %
+Hit time        : 1 cycles
+Miss penalty    : 13 cycles
+AMAT (formula)  : 1.406 cycles
+AMAT (measured) : 1.406 cycles
+Data errors     : 0
+------------------------------------------------

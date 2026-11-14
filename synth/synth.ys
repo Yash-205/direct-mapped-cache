@@ -1,0 +1,7 @@
+# Yosys generic synthesis of the cache (run from the project root):
+#   yosys -s synth/synth.ys
+read_verilog rtl/addr_decoder.v rtl/tag_ram.v rtl/valid_ram.v rtl/data_ram.v
+read_verilog rtl/tag_comparator.v rtl/mem_interface.v rtl/cache_controller.v
+read_verilog rtl/cache_top.v
+synth -top cache_top
+tee -o synth/synth_report.txt stat

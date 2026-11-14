@@ -1,0 +1,13 @@
+------------------------------------------------
+Trace           : traces/sequential.hex
+Cache           : 1024 B, 16 B blocks, 64 lines
+Accesses        : 512
+Hits / Misses   : 384 / 128
+Hit ratio       : 75.00 %
+Miss ratio      : 25.00 %
+Hit time        : 1 cycles
+Miss penalty    : 13 cycles
+AMAT (formula)  : 4.250 cycles
+AMAT (measured) : 4.250 cycles
+Data errors     : 0
+------------------------------------------------
