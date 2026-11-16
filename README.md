@@ -2,6 +2,9 @@
 
 A parameterized direct-mapped cache with a 4-state controller FSM, a main-memory interface, and a trace-driven testbench that measures hit/miss statistics and Average Memory Access Time (AMAT).
 
+> 🎥 **Prototype Demo Video:** [Watch Demonstration Video](https://drive.google.com/file/d/1GKy-4Y65OcuxcwMOC8wwbGEnkBSRgpLZ/view?usp=sharing)  
+> 📄 **Phase I Report:** [IEEE_Project_Report_MCA.docx](IEEE_Project_Report_MCA.docx)
+
 **Default Configuration:**
 * **Capacity:** 1 KB cache
 * **Block Size:** 16-byte blocks
