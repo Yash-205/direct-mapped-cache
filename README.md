@@ -98,7 +98,7 @@ A cache is just a small, fast memory table. In this project, an incoming 32-bit 
 2. **Index (6 bits):** Picks 1 of the 64 rows (lines) in the cache table.
 3. **Tag (22 bits):** The ID card stored in that row to check if it's the address we actually want.
 
-👉 **File to read first:** [rtl/addr_decoder.v](file:///Users/yashagarwal/Downloads/WORK/Projects_Main/direct-mapped-cache/rtl/addr_decoder.v) — it's doing this exact bit-slicing.
+ **File to read first:** [rtl/addr_decoder.v](file:///Users/yashagarwal/Downloads/WORK/Projects_Main/direct-mapped-cache/rtl/addr_decoder.v) — it's doing this exact bit-slicing.
 
 ---
 
@@ -144,12 +144,12 @@ Once you understand how one request works, look at how 500+ requests behave in a
 
 Open [tb/tb_cache.v](file:///Users/yashagarwal/Downloads/WORK/Projects_Main/direct-mapped-cache/tb/tb_cache.v) and [results/report.md](file:///Users/yashagarwal/Downloads/WORK/Projects_Main/direct-mapped-cache/results/report.md):
 
-1. **Sequential Trace (Spatial Locality):**
+1. **Sequential trace (Spatial Locality):**
    * Accesses: Address `0x00`, `0x04`, `0x08`, `0x0C`, `0x10`...
    * Word 0 misses $\rightarrow$ fetches 16 bytes into the block.
    * Words 1, 2, and 3 are already in that block $\rightarrow$ **hits!**
    * Result: **$75\%$ hit rate** ($\frac{3}{4}$).
-2. **Repeated Trace (Temporal Locality):**
+2. **Repeated trace (Temporal Locality):**
    * Loops through a small array 8 times.
    * Misses on the 1st pass, hits 100% on passes 2–8 $\rightarrow$ **$96.9\%$ hit rate**.
 3. **AMAT (Average Memory Access Time):**
@@ -169,7 +169,7 @@ Start by opening [rtl/cache_controller.v](file:///Users/yashagarwal/Downloads/WO
 
 1. The Purpose of tb/main_memory.v:
 
-👉 It plays the role of the external RAM chip during simulation.
+It plays the role of the external RAM chip during simulation.
 
 Why it exists: When you simulate Verilog on your laptop, there is no physical RAM chip or motherboard plugged into your code.
 What it actually does: It acts as a "fake" DRAM chip. When the cache asks for data, main_memory.v starts a counter:
@@ -180,7 +180,7 @@ Where it lives: In tb/ (Testbench). It is not real hardware you synthesize; it's
 
 2. The Purpose of rtl/mem_interface.v:
 
-👉 It is the "courier" inside the cache that handles talking to that external RAM.
+It is the "courier" inside the cache that handles talking to that external RAM.
 
 Why it exists: External memory is slow and speaks a complex protocol (handshakes, multi-cycle delays, whole-block transfers). If the main cache controller had to do this directly, its logic would be messy.
 What problems it solves:
